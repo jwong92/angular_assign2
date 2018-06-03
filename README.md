@@ -15,3 +15,8 @@ __Jessica Wong__
 @jwong92
 
 ## Project Ideas
+
+1. Weather forecast SPA. We can display: temperature, wind, POP, clouds/sun/rain images. We can have filters for cities and dates.
+
+2. Sportsmen profiles SPA. We can display: person's image, full name, country, type of sport, medals / achievements. We can have filters for types of sport, countries.
+
