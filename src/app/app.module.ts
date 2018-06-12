@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { JWeatherComponent } from './j-weather/j-weather.component';
+import { WeatherlistComponent } from './weatherlist/weatherlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JWeatherComponent
+    JWeatherComponent,
+    WeatherlistComponent
   ],
   imports: [
     BrowserModule

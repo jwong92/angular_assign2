@@ -1,0 +1,27 @@
+<div *ngIf="weatherArr">
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Description</th>
+      <th>Temperature</th>
+      <th>Feels Like</th>
+      <th>Pop</th>
+      <th>Wind</th>
+      <th>Wind gust</th>
+      <th>Hours of sun</th>
+    </tr>
+    <tr *ngFor="let w of weatherArr">
+      <td>{{ w.day }}</td>
+      <td>{{ w.descr }}</td>
+      <td>{{ w.temp[0] }} {{ w.temp[1] }}</td>
+      <td>{{ w.feels }}</td>
+      <td>{{ w.pop }}</td>
+      <td>{{ w.wind }}</td>
+      <td>{{ w.gust }} kmh</td>
+      <td>{{ w.sun }} h</td>
+    </tr>
+  </table>
+  <!--<div *ngFor="let w of weatherArr">-->
+    <!--{{ w.day }} {{ w.descr }} {{ w.temp[0] }} {{ w.temp[1] }}-->
+  <!--</div>-->
+</div>
