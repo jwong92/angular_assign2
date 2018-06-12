@@ -1,6 +1,6 @@
 export class JWeather {
     id: number;
-    day: string; 
+    day: string;
     feels: number;
     pop: string;
     wind: string;
