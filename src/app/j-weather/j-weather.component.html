@@ -8,15 +8,15 @@
   <tbody>
     <tr>
       <td>Feels Like: </td>
-      <td *ngFor="let w of weathers" [class.bg-color]="w.today === true">{{w.feels}}</td>
+      <td *ngFor="let w of weathers" [class.bg-color]="w.today === true">{{w.feels[0]}}</td>
     </tr>
     <tr>
       <td>Percent of Percipitation: </td>
-      <td *ngFor="let w of weathers" [class.bg-color]="w.today === true">{{w.pop}}</td>
+      <td *ngFor="let w of weathers" [class.bg-color]="w.today === true">{{w.pop[0]}}{{w.pop[1]}}</td>
     </tr>
     <tr>
       <td>Wind: </td>
-      <td *ngFor="let w of weathers" [class.bg-color]="w.today === true">{{w.wind}}</td>
+      <td *ngFor="let w of weathers" [class.bg-color]="w.today === true">{{w.wind[0]}}{{w.wind[1]}}</td>
     </tr>
   </tbody>
 </table>
