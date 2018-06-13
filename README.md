@@ -13,9 +13,9 @@ Created component __j-weather__, service __j-weather.service__ and model __j-wea
 export class JWeather {
     id: number;
     day: string; 
-    feels: number;
-    pop: string;
-    wind: string;
+    feels: [number, string];
+    pop: [number, string];
+    wind: [number, string];
     today: boolean;
 }
 ```
