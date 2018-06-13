@@ -1,0 +1,22 @@
+table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px 10px;
+}
+
+#page {
+    width:55%;
+    margin: 0 auto;
+}
+
+.bold {
+    font-weight: bold;
+    background-color: honeydew;
+}
+
+.search {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,30 @@
+<div *ngIf="weatherArr" id="page">
+
+  <div class="search"><input [(ngModel)]="weatherSearch.day">
+    <button (click)="findDay(weatherSearch)">Search by Day</button>
+    <button (click)="findDay()">Show All</button></div>
+
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Description</th>
+      <th>Temperature</th>
+      <th>Feels Like</th>
+      <th>Pop</th>
+      <th>Wind</th>
+      <th>Wind gust</th>
+      <th>Hours of sun</th>
+    </tr>
+    <tr *ngFor="let w of weatherArr" [ngClass]="{'bold': w.today}">
+      <td>{{ w.day }}</td>
+      <td>{{ w.descr }}</td>
+      <td>{{ w.temp[0] }} {{ w.temp[1] }}</td>
+      <td>{{ w.feels[0] }} {{ w.feels[1]}}</td>
+      <td>{{ w.pop[0] }} {{ w.pop[1] }}</td>
+      <td>{{ w.wind[0] }} {{ w.wind[1] }}</td>
+      <td>{{ w.gust }} kmh</td>
+      <td>{{ w.sun }} h</td>
+    </tr>
+  </table>
+
+</div>
