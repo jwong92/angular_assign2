@@ -19,7 +19,7 @@ export class AndweatherService {
             , wind: '20mph'
             , gust: 48
             , sun: 4
-            , today: true
+            , today: false
         }
         , {
             id: 2
@@ -45,7 +45,7 @@ export class AndweatherService {
             , wind: '5mph'
             , gust: 20
             , sun: 4
-            , today: false
+            , today: true
         }
         , {
             id: 4
@@ -102,7 +102,17 @@ export class AndweatherService {
 
     ];
 
-    getWeather(): Observable<Andweather[]>{
+    getWeather(day?: Andweather): Observable<Andweather[]> {
+        if (day) {
+            let results: Andweather[] = [];
+            for (let p of this.weatherArr) {
+                // filter results based on day
+                if (p.day.toLowerCase() === day.day.toLowerCase()) {
+                    results.push(p);
+                }
+            }
+            return of(results);
+        }
         return of(this.weatherArr);
     }
 

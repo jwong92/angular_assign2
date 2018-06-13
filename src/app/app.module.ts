@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { JWeatherComponent } from './j-weather/j-weather.component';
 import { WeatherlistComponent } from './weatherlist/weatherlist.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,8 @@ import { WeatherlistComponent } from './weatherlist/weatherlist.component';
     WeatherlistComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
