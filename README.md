@@ -22,6 +22,12 @@ export class JWeather {
 
 If the day is today, the background will highlight to a specific color
 
+#### Andrei Navumau
+Created component __weatherlist__, service __andweather.service__ and model __andweather__. Within the model, extended class JWeather and added extra properties. Apart from 'number' and 'string' data types used 'tuple' and 'boolean'.
+The page shows a table with weather data, where each row is a separate day of the week. The current day has bold text in the table.
+Added search functionality, so that user can filter days, searching by name (case insensitive).
+
+
 ## Collaborators
 
 __Andrei Navumau__
