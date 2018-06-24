@@ -1,0 +1,24 @@
+<h1>Welcome to Andrei's Store</h1>
+<!-- SEARCH BOX -->
+<!-- FILTER CHECKBOXES -->
+<!-- LIST OF ALL STORES -->
+<div *ngIf='designers'>
+  <div *ngFor='let d of designers'>
+    <div *ngIf="d.brand == null; else otherBrand">
+      <p>
+        Brand: Not Available 
+        <br/> First Name: {{d.firstName}}
+        <br/> Last Name: {{d.lastName}}
+        <br/>
+      </p>
+    </div>
+    <ng-template #otherBrand>
+      <p>
+        Brand: {{d.brand}}
+        <br/> First Name: {{d.firstName}}
+        <br/> Last Name: {{d.lastName}}
+        <br/>
+      </p>
+    </ng-template>
+  </div>
+</div>
