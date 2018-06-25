@@ -24,7 +24,7 @@
     </thead>
     <tr *ngFor="let w of weather">
       <td>{{ w.id }}</td>
-      <td>{{ w.day }}</td>
+      <td><a routerLink="andrei/{{ w.id }}">{{ w.day }}</a></td>
       <td>{{ w.feels }}</td>
       <td>{{ w.pop }}</td>
       <td>{{ w.wind }}</td>
