@@ -7,9 +7,10 @@ import {DetailsComponent} from './details/details.component';
 import {ResultsComponent} from './results/results.component';
 import { WeatherlistComponent } from './weatherlist/weatherlist.component';
 import { WeatherdetailsComponent } from './weatherdetails/weatherdetails.component';
+import { StartpageComponent } from './startpage/startpage.component';
 
 const routes: Routes = [
-  {path: '', component: HomepageComponent},
+  {path: '', component: StartpageComponent},
   {path: 'details/:id', component: DetailsComponent},
   {path: 'results/:name', component: ResultsComponent},
     { path: 'andrei', component: WeatherlistComponent },

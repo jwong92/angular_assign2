@@ -11,6 +11,7 @@ import { HttpModule } from '@angular/http';
 import { WeatherlistComponent } from './weatherlist/weatherlist.component';
 import { WeatherdetailsComponent } from './weatherdetails/weatherdetails.component';
 import { FormsModule } from '@angular/forms';
+import { StartpageComponent } from './startpage/startpage.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     DetailsComponent,
     ResultsComponent,
     WeatherlistComponent,
-    WeatherdetailsComponent
+    WeatherdetailsComponent,
+    StartpageComponent
   ],
   imports: [
     BrowserModule,
