@@ -42,7 +42,7 @@ export class WeatherlistComponent implements OnInit {
         // console.log('search button is clicked');
         if (dayQuery) {
             this.dayString = dayQuery.day.charAt(0).toUpperCase() + dayQuery.day.substr(1).toLowerCase();
-            
+
         } else {
             this.dayString = this.dayTemp;
         }

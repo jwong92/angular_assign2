@@ -1,12 +1,13 @@
 <div *ngIf="weather" id="page">
+  <div *ngFor="let w of weather">
+    <div *ngIf="num==w.id">
 
-  <h1>Weather details in this day</h1>
-
+  <h1>Weather details on {{ w.day }} (# {{ w.id }})</h1>
+  <a class="home" routerLink="/andrei">Back</a>
 
   <table class="table">
     <thead class="thead-dark">
     <tr>
-      <th scope="col">ID</th>
       <th scope="col">Day</th>
       <th scope="col">Feels</th>
       <th scope="col">Pop</th>
@@ -14,16 +15,17 @@
       <th scope="col">Today</th>
     </tr>
     </thead>
-    <tbody *ngFor="let w of weather">
-    <tr *ngIf="num==w.id">
-      <td>{{ w.id }}</td>
+    <tbody >
+    <tr >
       <td>{{ w.day }}</td>
-      <td>{{ w.feels }}</td>
-      <td>{{ w.pop }}</td>
-      <td>{{ w.wind }}</td>
+      <td>{{ w.feels }} &deg;C </td>
+      <td>{{ w.pop }} &deg;C</td>
+      <td>{{ w.wind }} kmh</td>
       <td>{{ w.today }}</td>
     </tr>
     </tbody>
   </table>
-  <a routerLink="/andrei">Return back</a>
+  </div>
+  </div>
+
 </div>

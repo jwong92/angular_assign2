@@ -12,11 +12,16 @@ th, td {
 }
 
 #page {
-    width:70%;
+    width:90%;
     margin: 0 auto;
     font-size: x-large;
-    background-color: aquamarine;
+    background-image: url('/assets/img/jonathan-bowers-531776-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px 20px;
+    font-family: Helvetica, Arial, SansSerif;
+    min-height: 670px;
 }
 .search {
     margin-bottom: 20px;
@@ -28,27 +33,30 @@ th, td {
 
 a:hover.home {
     background-color: transparent;
-    color: black;
+    color: darkred;
 
 }
 a.home {
-    text-align: center;
-    color: darkred;
+    /*text-align: center;*/
+    color: bisque;
+    border: none;
+    width: 100%;
 }
 
 a {
     text-decoration: none;
-    color: darkslategray;
+    color: bisque;
     font-weight: bold;
     display: block;
     width: 50%;
     margin: 0 auto;
-    padding: 10px 5px;
+    padding: 5px 5px;
+    border: 1px solid bisque;
 }
 
 a:hover {
-    background-color: darkslategray;
-    color: white;
+    background-color: bisque;
+    color: darkred;
 }
 
 li {
@@ -59,16 +67,21 @@ li {
 
 ul, ol {
     padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
 }
 
 h1 {
-    text-align: center;
+    /*text-align: center;*/
+    color: antiquewhite;
 }
 
 .search input {
     width: 90%;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
+    padding: 10px 10px;
+    line-height: 12px;
 }
 
 .search {
@@ -83,24 +96,16 @@ h1 {
 }
 
 .button {
-    display: inline-block;
     padding: 9px 12px;
-    padding-top: 7px;
-    margin-bottom: 0;
-    font-size: 14px;
-    line-height: 20px;
-    color: #5e5e5e;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: #d1dade;
-    -webkit-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    background-image: none !important;
+    margin-top: 9px;
+    background-color: #b5ffe9;
+    color: #444545;
     border: none;
-    text-shadow: none;
-    box-shadow: none;
-    transition: all 0.12s linear 0s !important;
-    font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 70%;
+}
+
+.pink {
+    background-color: #ceabb1 !important;
 }

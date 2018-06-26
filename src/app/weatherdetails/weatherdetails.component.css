@@ -1,20 +1,49 @@
 table, tr, th, td {
-    border: 1px solid black;
+    border: 1px solid bisque;
     border-collapse: collapse;
 }
 
+table {
+    margin: 0 auto;
+    width: 70%;
+}
+
 th, td {
-    padding: 5px 10px;
+    padding: 10px 15px;
+    text-align: center;
 }
 
 #page {
-    width:70%;
+    width:90%;
     margin: 0 auto;
-}
-.search {
-    margin-bottom: 20px;
+    font-size: x-large;
+    background-image: url('/assets/img/lukasz-lada-275650-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 20px;
+    font-family: Helvetica, Arial, SansSerif;
+    min-height: 670px;
 }
 
 .marleft {
     margin-left: 10px;
 }
+
+a:hover.home {
+    color: crimson;
+
+}
+a.home {
+    /*text-align: center;*/
+    text-decoration: none;
+    color: darkred;
+    border: none;
+    width: 10%;
+    font-weight: bold;
+}
+
+h1 {
+    color: antiquewhite;
+}
+
