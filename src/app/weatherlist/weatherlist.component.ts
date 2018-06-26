@@ -10,6 +10,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class WeatherlistComponent implements OnInit {
     daySearch: Andweather = new Andweather();
+    dayString: string;
+    dayTemp: string;
     weather: Andweather[];
     error: string;
     setWeather(): void {
@@ -36,10 +38,17 @@ export class WeatherlistComponent implements OnInit {
                 }
             });
     }
-    findDay() {
-        console.log('search button is clicked');
+    findDay(dayQuery?: Andweather): void {
+        // console.log('search button is clicked');
+        if (dayQuery) {
+            this.dayString = dayQuery.day;
+        } else {
+            this.dayString = this.dayTemp;
+        }
+        this.andweatherService.getWeather().subscribe(results => this.weather = results);
     }
-  constructor(private andweatherService: AndweatherService) { }
+
+    constructor(private andweatherService: AndweatherService) { }
 
   ngOnInit() {
       this.setWeather();

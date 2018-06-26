@@ -18,5 +18,7 @@ export class AndweatherService {
         return this.http.get<Andweather[]>(this.apiURL, { params: this.params });
     }
 
+    // weatherArr: Andweather[] = this.getWeather();
+
   constructor(private http: HttpClient) { }
 }

@@ -1,3 +1,7 @@
+body {
+    background-color: aquamarine;
+}
+
 table, tr, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -10,6 +14,9 @@ th, td {
 #page {
     width:70%;
     margin: 0 auto;
+    font-size: x-large;
+    background-color: aquamarine;
+    padding: 20px 20px;
 }
 .search {
     margin-bottom: 20px;
@@ -17,4 +24,70 @@ th, td {
 
 .marleft {
     margin-left: 10px;
+}
+
+a:hover.home {
+    background-color: transparent;
+    color: black;
+
+}
+a.home {
+    text-align: center;
+    color: darkred;
+}
+
+a {
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: bold;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 5px;
+}
+
+a:hover {
+    background-color: darkslategray;
+    color: white;
+}
+
+li {
+  list-style: none;
+    text-align: center;
+    padding-left: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.search input {
+    margin: 0 auto;
+}
+
+.search {
+    padding: 5px 300px;
+}
+
+.button {
+    display: inline-block;
+    padding: 9px 12px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5e5e5e;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #d1dade;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-image: none !important;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.12s linear 0s !important;
+    font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
 }

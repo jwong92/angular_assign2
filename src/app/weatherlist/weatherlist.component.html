@@ -4,13 +4,21 @@
 
   <h1>List of all days</h1>
     <ul *ngFor="let w of weather">
-        <li><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>
+        <div *ngIf="dayString;then content else other_content"></div>
+        <ng-template #content><li *ngIf="dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li></ng-template>
+        <ng-template #other_content><li><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li></ng-template>
+
+        <!--<div *ngIf="dayString">-->
+            <!--<li *ngIf="dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>-->
+        <!--</div>-->
+        <!--<li *ngIf="dayString && dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>-->
     </ul>
 
-    <div class="search"><input [(ngModel)]="daySearch.day">
+    <div class="search">
+        <input [(ngModel)]="daySearch.day">
         <button (click)="findDay(daySearch)">Search by Day</button>
         <button (click)="findDay()">Show All</button>
     </div>
 
-
+    <div><a class="home" routerLink="/">Return home</a></div>
 </div>
