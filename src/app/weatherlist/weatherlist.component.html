@@ -16,8 +16,12 @@
 
     <div class="search">
         <input [(ngModel)]="daySearch.day">
-        <button (click)="findDay(daySearch)">Search by Day</button>
-        <button (click)="findDay()">Show All</button>
+        <div class="btns">
+            <button (click)="findDay(daySearch)">Search by Day</button>
+        </div>
+        <div class="btns">
+            <button (click)="findDay()">Show All</button>
+        </div>
     </div>
 
     <div><a class="home" routerLink="/">Return home</a></div>

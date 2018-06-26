@@ -54,6 +54,10 @@ a:hover {
 li {
   list-style: none;
     text-align: center;
+
+}
+
+ul, ol {
     padding-left: 0;
 }
 
@@ -62,11 +66,18 @@ h1 {
 }
 
 .search input {
-    margin: 0 auto;
+    width: 90%;
 }
 
 .search {
-    padding: 5px 300px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.btns {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
 }
 
 .button {
