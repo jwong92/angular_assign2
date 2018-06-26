@@ -1,18 +1,16 @@
+<div *ngIf="error">{{ error }}</div>
 <div *ngIf="weather" id="page">
+
 
   <h1>List of all days</h1>
     <ul *ngFor="let w of weather">
         <li><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>
     </ul>
 
-  <!--<div class="search"><input [(ngModel)]="brandsSearch.brand">-->
-    <!--<button type="button" class="btn btn-success marleft" (click)="findDes(brandsSearch)">Search by Brand</button>-->
-
-    <!--<button type="button" class="btn btn-light marleft" (click)="showEmail()">Show Email</button>-->
-    <!--<button type="button" class="btn btn-light marleft" (click)="showCategory()">Show Category</button>-->
-    <!--<button type="button" class="btn btn-primary marleft" (click)="showInit()">Show Initial</button>-->
-
-  <!--</div>-->
+    <div class="search"><input [(ngModel)]="daySearch.day">
+        <button (click)="findDay(daySearch)">Search by Day</button>
+        <button (click)="findDay()">Show All</button>
+    </div>
 
 
 </div>
