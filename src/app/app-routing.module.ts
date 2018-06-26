@@ -6,13 +6,14 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {DetailsComponent} from './details/details.component';
 import {ResultsComponent} from './results/results.component';
 import { WeatherlistComponent } from './weatherlist/weatherlist.component';
+import { WeatherdetailsComponent } from './weatherdetails/weatherdetails.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
   {path: 'details/:id', component: DetailsComponent},
   {path: 'results/:name', component: ResultsComponent},
     { path: 'andrei', component: WeatherlistComponent },
-    { path: 'andrei/:id', component: WeatherlistComponent }
+    { path: 'andrei/:id', component: WeatherdetailsComponent }
 ]
 
 @NgModule({

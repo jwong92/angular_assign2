@@ -1,0 +1,29 @@
+<div *ngIf="weather" id="page">
+
+  <h1>Weather details in this day</h1>
+
+
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Day</th>
+      <th scope="col">Feels</th>
+      <th scope="col">Pop</th>
+      <th scope="col">Wind</th>
+      <th scope="col">Today</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let w of weather">
+    <tr *ngIf="num==w.id">
+      <td>{{ w.id }}</td>
+      <td>{{ w.day }}</td>
+      <td>{{ w.feels }}</td>
+      <td>{{ w.pop }}</td>
+      <td>{{ w.wind }}</td>
+      <td>{{ w.today }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <a routerLink="/andrei">Return back</a>
+</div>

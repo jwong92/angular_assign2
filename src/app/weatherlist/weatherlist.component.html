@@ -1,6 +1,9 @@
 <div *ngIf="weather" id="page">
 
-  <h1>List of days</h1>
+  <h1>List of all days</h1>
+    <ul *ngFor="let w of weather">
+        <li><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>
+    </ul>
 
   <!--<div class="search"><input [(ngModel)]="brandsSearch.brand">-->
     <!--<button type="button" class="btn btn-success marleft" (click)="findDes(brandsSearch)">Search by Brand</button>-->
@@ -11,25 +14,5 @@
 
   <!--</div>-->
 
-  <table class="table">
-    <thead class="thead-dark">
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Day</th>
-      <th scope="col">Feels</th>
-      <th scope="col">Pop</th>
-      <th scope="col">Wind</th>
-      <th scope="col">Today</th>
-    </tr>
-    </thead>
-    <tr *ngFor="let w of weather">
-      <td>{{ w.id }}</td>
-      <td><a routerLink="andrei/{{ w.id }}">{{ w.day }}</a></td>
-      <td>{{ w.feels }}</td>
-      <td>{{ w.pop }}</td>
-      <td>{{ w.wind }}</td>
-      <td>{{ w.today }}</td>
-    </tr>
-  </table>
 
 </div>

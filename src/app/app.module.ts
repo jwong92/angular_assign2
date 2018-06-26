@@ -9,6 +9,7 @@ import { ResultsComponent } from './results/results.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { WeatherlistComponent } from './weatherlist/weatherlist.component';
+import { WeatherdetailsComponent } from './weatherdetails/weatherdetails.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WeatherlistComponent } from './weatherlist/weatherlist.component';
     HomepageComponent,
     DetailsComponent,
     ResultsComponent,
-    WeatherlistComponent
+    WeatherlistComponent,
+    WeatherdetailsComponent
   ],
   imports: [
     BrowserModule,
