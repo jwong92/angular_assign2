@@ -41,7 +41,8 @@ export class WeatherlistComponent implements OnInit {
     findDay(dayQuery?: Andweather): void {
         // console.log('search button is clicked');
         if (dayQuery) {
-            this.dayString = dayQuery.day;
+            this.dayString = dayQuery.day.charAt(0).toUpperCase() + dayQuery.day.substr(1).toLowerCase();
+            
         } else {
             this.dayString = this.dayTemp;
         }
