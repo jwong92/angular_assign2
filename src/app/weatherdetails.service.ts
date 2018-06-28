@@ -10,8 +10,9 @@ export class WeatherdetailsService {
     key = 'andrei';
     params = new HttpParams()
         .set('api_key', this.key);
-    apiURL: string = 'https://jesswong.ca/API.php?api_key';
-    getDay(day?: Andweather): Observable<Andweather[]> {
+    apiURL: string = 'https://jesswong.ca/API.php';
+    getDay(day: string): Observable<Andweather[]> {
+        this.params = this.params.append('day_id', day);
         return this.http.get<Andweather[]>(this.apiURL, { params: this.params });
     }
 

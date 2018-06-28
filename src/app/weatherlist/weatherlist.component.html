@@ -9,15 +9,11 @@
         <div *ngIf="dayString;then content else other_content"></div>
         <ng-template #content><li *ngIf="dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li></ng-template>
         <ng-template #other_content><li><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li></ng-template>
-
-        <!--<div *ngIf="dayString">-->
-            <!--<li *ngIf="dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>-->
-        <!--</div>-->
-        <!--<li *ngIf="dayString && dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>-->
     </ul>
     </div>
 
     <div class="search">
+        <label>Search form</label>
         <input [(ngModel)]="daySearch.day">
         <div class="btns">
             <button class="button" (click)="findDay(daySearch)">Search by Day</button>

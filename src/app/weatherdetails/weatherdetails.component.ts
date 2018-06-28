@@ -12,12 +12,14 @@ import {AndweatherService} from '../andweather.service';
 })
 export class WeatherdetailsComponent implements OnInit {
     weather: Andweather[];
-    num: number;
+    num: string;
     getNum(): void {
-        this.num = +this.route.snapshot.paramMap.get('id');
+        this.num = this.route.snapshot.paramMap.get('id');
+        console.log(this.num);
     }
     setWeather(): void {
-        this.weatherdetailsService.getDay().subscribe(data => this.weather = data);
+
+        this.weatherdetailsService.getDay(this.num).subscribe(data => this.weather = data);
     }
   constructor(
       private route: ActivatedRoute,

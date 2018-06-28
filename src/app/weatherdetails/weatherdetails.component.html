@@ -1,25 +1,25 @@
 <div *ngIf="weather" id="page">
-  <div *ngFor="let w of weather">
-    <div *ngIf="num==w.id">
+  <div>
+    <div>
 
-  <h1>Weather details on {{ w.day }} (# {{ w.id }})</h1>
+  <h1>Weather details on {{ weather.day }} (# {{ weather.id }})</h1>
   <a class="home" routerLink="/andrei">Back</a>
       <div class="ctns">
         <div class="container">
           <div class="first">Day:</div>
-          <div>{{ w.day }}</div>
+          <div>{{ weather.day }}</div>
         </div>
         <div class="container">
           <div class="first">Feels:</div>
-          <div>{{ w.feels }} &deg;C</div>
+          <div>{{ weather.feels }} &deg;C</div>
         </div>
         <div class="container">
           <div class="first">Pop:</div>
-          <div>{{ w.pop }} &deg;C</div>
+          <div>{{ weather.pop }} &deg;C</div>
         </div>
         <div class="container">
           <div class="first">Wind:</div>
-          <div>{{ w.wind }} kmh</div>
+          <div>{{ weather.wind }} kmh</div>
         </div>
       </div>
 
