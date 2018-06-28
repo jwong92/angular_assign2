@@ -5,17 +5,21 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
 import { DetailsComponent } from './details/details.component';
-import { ResultsComponent } from './results/results.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { WeatherlistComponent } from './weatherlist/weatherlist.component';
+import { WeatherdetailsComponent } from './weatherdetails/weatherdetails.component';
+import { StartpageComponent } from './startpage/startpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     DetailsComponent,
-    ResultsComponent
+    WeatherlistComponent,
+    WeatherdetailsComponent,
+    StartpageComponent
   ],
   imports: [
     BrowserModule,

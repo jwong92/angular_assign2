@@ -1,0 +1,31 @@
+<div *ngIf="error">{{ error }}</div>
+<div *ngIf="weather" id="page">
+
+
+  <h1>Days from API</h1>
+    <a class="home" routerLink="/">Home</a>
+    <div *ngFor="let w of weather">
+    <ul>
+        <div *ngIf="dayString;then content else other_content"></div>
+        <ng-template #content><li *ngIf="dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li></ng-template>
+        <ng-template #other_content><li><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li></ng-template>
+
+        <!--<div *ngIf="dayString">-->
+            <!--<li *ngIf="dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>-->
+        <!--</div>-->
+        <!--<li *ngIf="dayString && dayString==w.day"><a routerLink="/andrei/{{ w.id }}">{{ w.day }}</a></li>-->
+    </ul>
+    </div>
+
+    <div class="search">
+        <input [(ngModel)]="daySearch.day">
+        <div class="btns">
+            <button class="button" (click)="findDay(daySearch)">Search by Day</button>
+        </div>
+        <div class="btns">
+            <button class="button pink" (click)="findDay()">Show All</button>
+        </div>
+    </div>
+
+
+</div>

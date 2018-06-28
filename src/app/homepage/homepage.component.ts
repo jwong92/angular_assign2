@@ -13,7 +13,6 @@ export class HomepageComponent implements OnInit {
 
   designers: Designers[];
   designer: Designers = new Designers();
-  // designer: Designers = new Designers();
 
   findDesigner(nameSearch: Designers): void {
     this.homepageService.getDesigner(nameSearch).subscribe(data => this.designers = data);
