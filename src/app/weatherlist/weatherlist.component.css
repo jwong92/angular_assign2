@@ -79,7 +79,7 @@ h1 {
 .search input {
     width: 90%;
     display: block;
-    margin: 20px auto;
+    margin: 0 auto 20px;
     padding: 10px 10px;
     line-height: 12px;
 }
@@ -91,21 +91,38 @@ h1 {
 
 .btns {
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
     text-align: center;
 }
 
 .button {
     padding: 9px 12px;
     margin-top: 9px;
-    background-color: #b5ffe9;
-    color: #444545;
+    background-color: darkslategray;
+    color: beige;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    width: 70%;
+    width: 100%;
+    font-size: x-large;
 }
 
 .pink {
-    background-color: #ceabb1 !important;
+    background-color: bisque !important;
+    color: saddlebrown;
+}
+
+.alternative {
+    border-color: lime;
+    border-width: 2px;
+    text-align: center;
+    color: lime;
+    margin-top: 20px;
+}
+
+label {
+    color: white;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
 }
