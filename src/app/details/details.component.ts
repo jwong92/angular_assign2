@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Designers} from '../designers';
+import {DetailsService} from '../details.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +11,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  designer: Designers[];
+  name: string;
+  id: number;
+
+  constructor(
+    private detailsService: DetailsService,
+    private route: ActivatedRoute,
+    private location: Location
+  ) { }
+
+  getId(): number {
+    this.id = +this.route.snapshot.paramMap.get('id');
+    return this.id;
+  }
+
+  viewDetails(): void {
+    this.detailsService.getDetails(this.getId()).subscribe(data => this.designer = data);
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 
   ngOnInit() {
+    this.viewDetails();
   }
 
 }

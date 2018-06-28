@@ -1,24 +1,45 @@
-<h1>Welcome to Andrei's Store</h1>
-<!-- SEARCH BOX -->
-<!-- FILTER CHECKBOXES -->
-<!-- LIST OF ALL STORES -->
-<div *ngIf='designers'>
-  <div *ngFor='let d of designers'>
-    <div *ngIf="d.brand == null; else otherBrand">
-      <p>
-        Brand: Not Available 
-        <br/> First Name: {{d.firstName}}
-        <br/> Last Name: {{d.lastName}}
-        <br/>
-      </p>
-    </div>
-    <ng-template #otherBrand>
-      <p>
-        Brand: {{d.brand}}
-        <br/> First Name: {{d.firstName}}
-        <br/> Last Name: {{d.lastName}}
-        <br/>
-      </p>
-    </ng-template>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Design Your Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+</head>
+<body id="background">
+  <h1>Welcome to Andrei's Store</h1>
+  <!-- SEARCH BOX -->
+  <div class="search-section">
+      <h2>Find a Designer by Name</h2>
+      <input [(ngModel)]="designer.brand" />
+      <button (click)="findDesigner(designer)">Search</button>
+      <p>{{designer.id}}</p>
   </div>
-</div>
+  
+  <!-- FILTER CHECKBOXES -->
+  <!-- LIST OF ALL STORES -->
+  <div *ngIf='designers'>
+    <h2>Full Directory of Designers</h2>
+    <div id="list_designers" *ngFor='let d of designers'>
+      <div *ngIf="d.brand == null; else otherBrand">
+        <p class="brand_name">Name Not Available</p>
+        <p>First Name: {{d.firstName}}</p>
+        <p class="lname">Last Name: {{d.lastName}}</p>
+        <p><a routerLink="details/{{d.id}}">More Details</a></p>
+      <br />
+      </div>
+      <ng-template #otherBrand>
+        <p class="brand_name">{{d.brand}}</p>
+        <p>First Name: {{d.firstName}}</p> 
+        <p class="lname">Last Name: {{d.lastName}}</p>
+        <p><a routerLink="details/{{d.id}}">More Details</a></p>
+        <br />
+      </ng-template>
+    </div>
+  </div>
+  
+  <button (click)="displayDesigners()">Clear Search</button>
+</body>
+</html>
+

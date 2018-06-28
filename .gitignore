@@ -40,3 +40,5 @@ Thumbs.db
 
 # API Passkey
 /src/app/homepage.service.ts
+/src/app/details.service.ts
+/src/app/results.service.ts

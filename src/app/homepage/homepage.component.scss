@@ -1,0 +1,84 @@
+body, html {
+    height: 100%;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+
+    #background {
+        background-image: url('../../assets/images/abstract-art-background-1037995.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }
+
+    h1 {
+        padding-bottom: 0.5rem;
+        background-color: white;
+        margin: 0 auto;
+        width: 50%;
+    }
+}
+
+h1, h2 {
+    margin-top: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+#list_designers {
+    p {
+        margin: 0px;
+    }
+    .lname {
+        margin-bottom: 1rem;
+    }
+    .brand_name {
+        font-weight: bolder;
+    }
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 0.2rem;
+    color:#8c7c7c;
+
+    &:hover {
+        background-color: #f1f1f1a6;
+        transition: background-color 0.5s ease-in;
+    }
+}
+
+.search-section {
+    background-color: white;
+    position: sticky;
+    top:0;
+    padding-bottom: 0.5rem;
+    width: 50%;
+    margin: 0 auto;
+
+    input {
+        width: 90%;
+        height: 2rem;
+        border-radius: 5px;    
+        border: 1px solid grey;
+        font-size: 1em;
+    }
+}
+
+button {
+    width: 8rem;
+    display: block;
+    margin: 0.5rem auto;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 1em;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,3 +1,24 @@
-<p>
-  details works!
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Detailed Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+</head>
+<div id="background"></div>
+<body>
+    <div *ngFor="let d of designer">
+        <div class="detailed_result">
+            <p>{{d.brand}}</p>
+            <p><span id="last_name">{{d.lastName}}</span>, {{d.firstName}}</p>
+            <p>{{d.mobile}}</p>
+            <p>{{d.email}}</p>
+            <p>{{d.category}}</p>
+        </div>
+    </div>
+    
+    <button (click)="goBack()">Go Back</button>
+</body>
+</html>
