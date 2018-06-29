@@ -11,3 +11,6 @@ __Commit - 428550a__
 __Commit__
 * Added a details service and component to view details for each designer
 * Added a search input for the homepage component to allow a user to search for various designers
+
+__Commit - dd17a1e..205d3bf__
+* Added email and category checkbox filters along with the search for a designer name

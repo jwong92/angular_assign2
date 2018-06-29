@@ -58,7 +58,7 @@ a:hover {
 }
 .search-section button {
   display: inline-block;
-  margin: 3rem;
+  margin: 1rem;
 }
 .search-section button:hover {
   background: lightgrey;
