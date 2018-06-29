@@ -56,6 +56,10 @@ a:hover {
   width: 50%;
   margin: 0 auto;
 }
+.search-section button {
+  display: inline-block;
+  margin: 0.4rem;
+}
 .search-section input {
   width: 90%;
   height: 2rem;

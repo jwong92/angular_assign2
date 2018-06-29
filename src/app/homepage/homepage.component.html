@@ -14,10 +14,14 @@
       <h2>Find a Designer by Name</h2>
       <input [(ngModel)]="designer.brand" />
       <button (click)="findDesigner(designer)">Search</button>
-      <p>{{designer.id}}</p>
+      <button routerLink="/">Go Home</button>
   </div>
   
   <!-- FILTER CHECKBOXES -->
+  <!-- ERROR HANDLING -->
+  <div *ngIf="error">
+    <p>{{error}}</p>
+  </div>
   <!-- LIST OF ALL STORES -->
   <div *ngIf='designers'>
     <h2>Full Directory of Designers</h2>

@@ -3,6 +3,8 @@ import {Designers} from '../designers';
 import {HomepageService} from '../homepage.service';
 import {ActivatedRoute} from '@angular/router';
 import { Location } from '@angular/common';
+import { HttpResponse } from 'selenium-webdriver/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -13,13 +15,14 @@ export class HomepageComponent implements OnInit {
 
   designers: Designers[];
   designer: Designers = new Designers();
+  error: string;
 
   findDesigner(nameSearch: Designers): void {
     this.homepageService.getDesigner(nameSearch).subscribe(data => this.designers = data);
   }
 
   displayDesigners(): void {
-    this.homepageService.allDesigners().subscribe(data => this.designers = data);
+    this.homepageService.allDesigners().subscribe(data => this.designers = data, (err: string) => this.error = err);
   }
 
   goBack(): void {

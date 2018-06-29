@@ -14,6 +14,7 @@ export class DetailsComponent implements OnInit {
   designer: Designers[];
   name: string;
   id: number;
+  error: string;
 
   constructor(
     private detailsService: DetailsService,
@@ -27,7 +28,7 @@ export class DetailsComponent implements OnInit {
   }
 
   viewDetails(): void {
-    this.detailsService.getDetails(this.getId()).subscribe(data => this.designer = data);
+    this.detailsService.getDetails(this.getId()).subscribe(data => this.designer = data, err => this.error = err);
   }
 
   goBack(): void {

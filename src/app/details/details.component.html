@@ -9,6 +9,10 @@
 </head>
 <div id="background"></div>
 <body>
+    <!-- ERROR HANDLING -->
+    <div *ngIf="error">
+        <p>{{error}}</p>
+    </div>
     <div *ngFor="let d of designer">
         <div class="detailed_result">
             <p>{{d.brand}}</p>

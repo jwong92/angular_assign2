@@ -61,6 +61,11 @@ a {
     width: 50%;
     margin: 0 auto;
 
+    button {
+        display: inline-block;
+        margin: 0.4rem;
+    }
+
     input {
         width: 90%;
         height: 2rem;
