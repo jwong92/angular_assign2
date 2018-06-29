@@ -46,4 +46,6 @@ button {
 }
 button:hover {
   cursor: pointer;
+  background: lightgrey;
+  transition: 0.5s linear;
 }

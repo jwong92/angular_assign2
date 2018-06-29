@@ -48,6 +48,8 @@ button {
 
 button:hover {
   cursor: pointer;
+  background: lightgrey;
+  transition: 0.5s linear;
 }
 
 /*# sourceMappingURL=details.component.css.map */

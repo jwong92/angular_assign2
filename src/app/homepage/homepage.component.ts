@@ -25,6 +25,10 @@ export class HomepageComponent implements OnInit {
     this.homepageService.allDesigners().subscribe(data => this.designers = data, (err: string) => this.error = err);
   }
 
+  filterResults(filter:Designers): void {
+    this.homepageService.useFilters(filter).subscribe(data => this.designers = data);
+  }
+
   goBack(): void {
     this.location.back();
   }

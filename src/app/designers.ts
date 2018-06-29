@@ -5,5 +5,5 @@ export class Designers {
     firstName: string;
     mobile: string;
     email?: string;
-    categoary?: string;
+    category?: string;
 }

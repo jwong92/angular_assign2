@@ -13,11 +13,19 @@
   <div class="search-section">
       <h2>Find a Designer by Name</h2>
       <input [(ngModel)]="designer.brand" />
-      <button (click)="findDesigner(designer)">Search</button>
+      <div class="filter-section">
+        <label for="email">Email</label>
+        <input type="checkbox" [(ngModel)]="designer.email" id="email" />
+        <label for="category">Category</label>
+        <input type="checkbox" [(ngModel)]="designer.category" id="category" />
+      </div>
+      <!-- <button (click)="findDesigner(designer)">Search</button> -->
+      <button (click)="filterResults(designer)">Search</button>
       <button routerLink="/">Go Home</button>
-  </div>
-  
+  </div>  
+
   <!-- FILTER CHECKBOXES -->
+
   <!-- ERROR HANDLING -->
   <div *ngIf="error">
     <p>{{error}}</p>
@@ -30,6 +38,8 @@
         <p class="brand_name">Name Not Available</p>
         <p>First Name: {{d.firstName}}</p>
         <p class="lname">Last Name: {{d.lastName}}</p>
+        <p>{{d.email}}</p>
+        <p>{{d.category}}</p>
         <p><a routerLink="/details/{{d.id}}">More Details</a></p>
       <br />
       </div>
@@ -37,6 +47,8 @@
         <p class="brand_name">{{d.brand}}</p>
         <p>First Name: {{d.firstName}}</p> 
         <p class="lname">Last Name: {{d.lastName}}</p>
+        <p>{{d.email}}</p>
+        <p>{{d.category}}</p>
         <p><a routerLink="/details/{{d.id}}">More Details</a></p>
         <br />
       </ng-template>
